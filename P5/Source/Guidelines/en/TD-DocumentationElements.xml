@@ -8,7 +8,7 @@ $Id$
 -->
 
 
-<?xml-model href="http://tei.oucs.ox.ac.uk/jenkins/job/TEIP5/lastSuccessfulBuild/artifact/release/xml/tei/odd/p5.nvdl" type="application/xml" schematypens="http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0"?>
+<?xml-model href="http://tei.oucs.ox.ac.uk/jenkins/job/TEIP5/lastSuccessfulBuild/artifact/P5/release/xml/tei/odd/p5.nvdl" type="application/xml" schematypens="http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0"?>
 
 <div xmlns="http://www.tei-c.org/ns/1.0" type="div1" xml:id="TD" n="27"
   xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:s="http://www.ascc.net/xml/schematron"
@@ -674,7 +674,8 @@ to mark any technical term, thus:
             xmlns="http://www.tei-c.org/ns/Examples"><content>
               <sequence>
                 <elementRef key="fileDesc"/>
-                <classRef key="model.teiHeaderPart" minOccurs="0" maxOccurs="unbounded"/>
+                <classRef key="model.teiHeaderPart" minOccurs="0" maxOccurs="unbounded"
+                  expand="alternate"/>
                 <elementRef key="revisionDesc" minOccurs="0"/>
               </sequence>
             </content>
@@ -1304,7 +1305,6 @@ xmlns="http://www.tei-c.org/ns/Examples"><attList>
         <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/alternate.xml"/>
         <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/constraint.xml"/>
         <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/constraintSpec.xml"/>
-        <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/macro.anyXML.xml"/>
         <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/macro.schemaPattern.xml"/>
         <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/attList.xml"/>
         <include xmlns="http://www.w3.org/2001/XInclude" href="../../Specs/attDef.xml"/>
