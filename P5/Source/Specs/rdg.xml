@@ -33,14 +33,17 @@ $Id$
       <choice>
         <text/>
         <ref name="model.divLike"/>
+        <ref name="model.divPart.spoken"/>
         <ref name="model.pLike"/>
         <ref name="model.gLike"/>
         <ref name="model.phrase"/>
         <ref name="model.inter"/>
         <ref name="model.global"/>
-        <ref name="lg"/>
-        <ref name="l"/>
+        <ref name="model.lLike"/>
         <ref name="model.rdgPart"/>
+        <ref name="lg"/>
+        <ref name="sp"/>
+        <ref name="spGrp"/>
       </choice>
     </zeroOrMore>
   </content>
