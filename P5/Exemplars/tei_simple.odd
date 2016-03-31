@@ -40,8 +40,7 @@
             Hence it is made available under both the CC+BY and BSD-2 licences. The CC+BY licence is
             generally appropriate for usages which treat TEI content as data or documentation. The BSD-2
             licence is generally appropriate for usage of TEI content in a software environment. For
-            further information or clarification, please contact the <ref target="mailto:info@tei-c.org"
-              >TEI Consortium</ref>. </p>
+            further information or clarification, please contact the <ref target="mailto:info@tei-c.org">TEI Consortium</ref>. </p>
         </availability>
       </publicationStmt>
       <sourceDesc>
@@ -89,8 +88,7 @@
           </hi> approach , by recommending <term>customization</term> to suit particular projects, and by
           eschewing any attempt to dictate how the digital texts should be rendered or exchanged. However, this
           flexibility has come at the cost of relatively limited success in interoperability. In our view there is a
-          distinct set of uses (primarily in the area of digitized ‘European’-style books) that would benefit from a <hi
-            rend="italic">prescriptive</hi> recipe for digital text; this will sit alongside other domain-specific,
+          distinct set of uses (primarily in the area of digitized ‘European’-style books) that would benefit from a <hi rend="italic">prescriptive</hi> recipe for digital text; this will sit alongside other domain-specific,
           constrained TEI customizations, such as the very successful <term>Epidoc</term> in the epigraphic
           community. TEI Simple may become a prototype for a new family of constrained customizations. For instance, a
           TEI Simple MS for manuscript based work could be built on top of the ENRICH project, drawing on many of the
@@ -241,10 +239,10 @@
               brackets:<code>&lt;/someElement&gt;</code>. As with a directory on your computer, you can put as much
             stuff between those tags as your hard drive will hold. The following is a <term>well-formed</term> XML document</p>
 
-          <eg>&lt;someELement>Mary had a little lamb&lt;/someELement></eg>
+          <eg>&lt;someELement&gt;Mary had a little lamb&lt;/someELement&gt;</eg>
 
           <p>But so is
-            <eg>&lt;someELement>	 In the beginning God created the heaven and the earth....The grace of our Lord Jesus Christ be with you all. Amen.&lt;/someELement></eg>
+            <eg>&lt;someELement&gt;	 In the beginning God created the heaven and the earth....The grace of our Lord Jesus Christ be with you all. Amen.&lt;/someELement&gt;</eg>
             with all the other words of the Bible in between.</p>
         </div>
         <div>
@@ -261,10 +259,10 @@
          <lb/>&lt;line&gt;Its fleece was white as snow&lt;/line&gt;</eg>
             But
             <eg>
-              &lt;linegroup>
-              <lb/>&lt;line>Mary had a little lamb&lt;/line>
-              <lb/>&lt;line>Its fleece was white as snow&lt;/line>
-              <lb/>&lt;/linegroup>
+              &lt;linegroup&gt;
+              <lb/>&lt;line&gt;Mary had a little lamb&lt;/line&gt;
+              <lb/>&lt;line&gt;Its fleece was white as snow&lt;/line&gt;
+              <lb/>&lt;/linegroup&gt;
         </eg>
             is well-formed XML because the two &lt;line&gt; elements are enclosed by the root element
             &lt;linegroup&gt; and the opening and closing tag names are spelled the same way.</p>
@@ -288,7 +286,7 @@
               <term>escaped</term>. Its character entity is "ampersand + amp + semicolon"
             (&amp;amp;). These character entities are two of five <term>predefined entities</term> in the XML
             specifications that you can use without formally <term>declaring</term> them. The other three are the
-            apostrophe (&apos;), the double quotation mark (&quot;), and the "greater-than" symbol or right angle
+            apostrophe ('), the double quotation mark ("), and the "greater-than" symbol or right angle
             bracket (&gt;). Of these, the apostrophe entity is useful if you want to distinguish between the uses of the
             same character as the genitive marker and a single quotation mark. </p>
           <p>Within the range of TEI Simple you probably will not need to know any more about character entities, but
@@ -319,10 +317,10 @@
 
        <eg>  &lt;?xml-model href="http://raw.githubusercontent.com/TEIC/TEI-Simple/master/teisimple.rng"
 type="application/xml"
-schematypens="http://relaxng.org/ns/structure/1.0"?>
+schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
 <lb/>&lt;?xml-model href="http://raw.githubusercontent.com/TEIC/TEI-Simple/master/teisimple.rng"
 type="application/xml"
-schematypens="http://purl.oclc.org/dsdl/schematron"?></eg>
+schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;</eg>
 
           <p>You can encode quite successfully in TEI Simple by just cutting and pasting this code. If you work with a
             program like oXygen, you can choose a new document as a TEI Simple document, and it will open with all the
@@ -614,7 +612,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?></eg>
             tempted to encode this as follows</p>
 
           <egXML xmlns="http://www.tei-c.org/ns/Examples"><quote>
-        <l><s>The fair Ophelia!</s> &lt;s>Nymph, in thy orisons</l>
+        <l><s>The fair Ophelia!</s> &lt;s&gt;Nymph, in thy orisons</l>
         <l> Be all my sins remembered.&lt;/s&gt;</l>
        </quote></egXML>
           <p> But this will generate the error message <q>The element type "s" must be terminated by the matching
@@ -659,8 +657,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?></eg>
             of these rules very accurately and at great speed, but there is always an algorithmically intractable
             residue. St. Jerome, the translator of the Bible into Latin, spoke of <quote xml:lang="la">ipsum... suum et,
               ut ita dicam, vernaculum linguae genus</quote> (the distinct and as it were vernacular nature of each
-            language) and the 16th-century French poet Du Bellay argued that literal translation destroys the <quote
-              xml:lang="la">je ne scay quoy</quote> of a language. Pope wrote of a <quote>grace beyond the reach of
+            language) and the 16th-century French poet Du Bellay argued that literal translation destroys the <quote xml:lang="la">je ne scay quoy</quote> of a language. Pope wrote of a <quote>grace beyond the reach of
               art</quote>. Text encoding is a way of enabling a machine to process texts in ways that help human readers
             "make sense" of them. The machine can take you quite far, but it will only take you so far. In an encoding
             project of any complexity there will always be some moments when you remember this line from Wallace
@@ -668,7 +665,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?></eg>
           </p>
           <l>The squirming facts exceed the squamous mind.</l>
         </div>
-        <div xml:id = "tagabuse">
+        <div xml:id="tagabuse">
           <head>Should, Should Not, and Tag Abuse</head>
           <p>Valid encoding is not necessarily good encoding, just as rigid compliance with the law does not always square
           with justice. Here we are in the realm of Aristotle's <foreign>epieikia</foreign> or equity as a principle
@@ -677,7 +674,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?></eg>
           <term>vraisemblance</term> and <term>bienséance</term>. What SHOULD you do when confronted with a problem to which
           the schema offers no obvious solution? Do as your neighbours do is good advice when you live in a good neighbourhood, 
           and as a TEI encoder you happen to live in a very friendly and helpful neighbourhood.
-          Sign up for the <ref target ="https://listserv.brown.edu/archives/cgi-bin/wa?A0=TEI-L" >TEI listserv </ref> and ask 
+          Sign up for the <ref target="https://listserv.brown.edu/archives/cgi-bin/wa?A0=TEI-L">TEI listserv </ref> and ask 
           for advice.  It will come to you from just about any continent, very promptly at any hour of the day or night, 
           and it is nearly always relevant. Following the TEI list and pondering its advice is the best way of getting a 
           feel for the discretionary space that surrounds all rules in a given environment. It will keep you from committing <term>tag abuse</term>, 
@@ -915,8 +912,7 @@ live without God in the world, and only mind earthly things.
               <specDesc key="group"/>
               <specDesc key="body"/>
               <specDesc key="back"/>
-            </specList> Elements specific to front and back matter are described below in section <ptr
-              target="#Simple-fronbac"/>. In this section we discuss the elements making up the body of a text. </p>
+            </specList> Elements specific to front and back matter are described below in section <ptr target="#Simple-fronbac"/>. In this section we discuss the elements making up the body of a text. </p>
           <div xml:id="divs">
             <head>Text Division Elements</head>
             <p>The body of a prose text may be just a series of paragraphs, or these paragraphs may be grouped together
@@ -934,8 +930,7 @@ live without God in the world, and only mind earthly things.
               structure of a book, which can be decomposed hierarchically into units such as parts, containing chapters,
               containing sections, and so on. TEI texts in general conform to this simple hierarchic model.</p>
             <p> The <att>xml:id</att> attribute may be used to supply a unique identifier for the division, which may be
-              used for cross references or other links to it, such as a commentary, as further discussed in section <ptr
-                target="#Simple-ptrs"/>. It is often useful to provide an <att>xml:id</att> attribute for every major
+              used for cross references or other links to it, such as a commentary, as further discussed in section <ptr target="#Simple-ptrs"/>. It is often useful to provide an <att>xml:id</att> attribute for every major
               structural unit in a text, and to derive its values in some systematic way, for example by appending a
               section number to a short code for the title of the work in question, as in the examples below. It is
               particularly useful to supply such identifiers if the resource concerned is to be made available over the
@@ -1346,8 +1341,7 @@ live without God in the world, and only mind earthly things.
          <q>you no speak-e, damme, I kill-e.</q> And so saying, the lighted tomahawk began
         flourishing about me in the dark.</p></egXML>
               If it is important to convey the idea that the two <gi>q</gi> elements together make up a single speech,
-              the linking attributes <att>next</att> and <att>prev</att> may be used, as described in section <ptr
-                target="#xatts"/>.</p>
+              the linking attributes <att>next</att> and <att>prev</att> may be used, as described in section <ptr target="#xatts"/>.</p>
             <p>Quotations may be accompanied by a reference to the source or speaker, using the <att>who</att>
               attribute, whether or not this is explicit in the text, as in the following example:
               <egXML xmlns="http://www.tei-c.org/ns/Examples"><q who="#Wilson">Spaulding, he came
@@ -1381,11 +1375,8 @@ live without God in the world, and only mind earthly things.
             <p>The codes used to identify languages, supplied on the <att>xml:lang</att> attribute, must be constructed
               in a particular way, and must conform to common Internet standards<note place="foot">The relevant standard
                 is <title>Best Current Practice 47</title> (<ptr target="http://tools.ietf.org/html/bcp47"/>). The
-                authoritative list of registered subtags is maintained by IANA and is available at <ptr
-                  target="http://www.iana.org/assignments/language-subtag-registry"/>. For a general overview of the
-                construction of language tags, see <ptr target="http://www.w3.org/International/articles/language-tags/"
-                />, and for a practical step-by-step guide, see <ptr
-                  target="http://www.w3.org/International/questions/qa-choosing-language-tags"/>.</note>, as further
+                authoritative list of registered subtags is maintained by IANA and is available at <ptr target="http://www.iana.org/assignments/language-subtag-registry"/>. For a general overview of the
+                construction of language tags, see <ptr target="http://www.w3.org/International/articles/language-tags/"/>, and for a practical step-by-step guide, see <ptr target="http://www.w3.org/International/questions/qa-choosing-language-tags"/>.</note>, as further
               explained in the relevant section of the TEI Guidelines. Some simple example codes for a few languages are
               given here: <table>
                 <row>
@@ -1598,8 +1589,7 @@ live without God in the world, and only mind earthly things.
                 <item>links an element to the previous element in an aggregate.</item>
               </list></p>
             <p>The <att>ana</att> (analysis) attribute is intended for use where a set of abstract analyses or
-              interpretations have been defined somewhere within a document, as further discussed in section <ptr
-                target="#Simple-anal"/>. For example, a linguistic analysis of the sentence <q>John loves Nancy</q> might be
+              interpretations have been defined somewhere within a document, as further discussed in section <ptr target="#Simple-anal"/>. For example, a linguistic analysis of the sentence <q>John loves Nancy</q> might be
               encoded as follows:
               <egXML xmlns="http://www.tei-c.org/ns/Examples"><seg type="sentence" ana="SVO"><seg type="lex" ana="#NP1">John</seg><seg type="lex" ana="#VVI">loves</seg><seg type="lex" ana="#NP1">Nancy</seg></seg></egXML>
               This encoding implies the existence elsewhere in the document of elements with identifiers <val>SVO</val>,
@@ -2408,7 +2398,7 @@ live without God in the world, and only mind earthly things.
                     extra-canonical text.</item>
                   <label>glossary</label>
                   <item>A list of terms associated with definition texts (‘glosses’): this should be encoded as a
-                      <tag>&lt;list type="gloss"></tag> element</item>
+                      <tag>&lt;list type="gloss"&gt;</tag> element</item>
                   <label>notes</label>
                   <item>A section in which textual or other kinds of notes are gathered together.</item>
                   <label>bibliogr</label>
@@ -2733,19 +2723,19 @@ live without God in the world, and only mind earthly things.
       </div>
       <div xml:id="processingmodel"> 
         <head>A Short Tour of the Processing Model</head>
-        <p></p>
+        <p/>
         
         <p> The key feature of the Processing Model is a notation that allows each element to be assigned to a
         structural category, which in turn is mapped to a description of how to render it. This allows a processor to know whether to handle the element or not, and broadly speaking how to display or otherwise process it. Several projects that have used TEI Simple and its Processing Model report that it cuts the length of required code by two thirds, reduces its complexity, and makes it easier to maintain.  The model and rendition instructions are part of the TEI ODD and can be customized. </p>
-        <p>ODD, short for <q>One Document Does it all</q>, is the technology used by the TEI for maintaining its rules. An ODD is an XML document written in a <term>literate programming</term> style, mixing code and explanatory prose. From an ODD and with the use of an <term>ODD Processor</term> you can produce reference documentation as well as schemas. Support for the Processing Model is a significant extension of the TEI ODD and provides and answer to the question of what to do with a text once you have encoded it. Encoding is often the easy part.  For a fuller account of ODD see the chapter on <ref target = "http://www.tei-c.org/release/doc/tei-p5-doc/en/html/TD.html">Documentation Elements</ref> in the Guidelines. </p>
-        <p>In principle there are a variety of ways in which a processor can use processing instructions encoded in the ODD to produce a readable text, whether a Web page, an epub, or a PDF. In practice <ref target ="http://showcases.exist-db.org/exist/apps/tei-simple/index.html">Wolfgang Meier's XQuery based ODD processor</ref>  is the fullest and most thoroughly tested current implementation. From the instructions in the ODD it creates an XQuery Library module that relies heavily on  XQuery's typeswitch, a switch or case statement whose structure lends itself to transforming each processing instruction in the ODD into an XQuery function.  In  a second step the XQuery Library module is used to transform the TEI Simple text.  </p>
+        <p>ODD, short for <q>One Document Does it all</q>, is the technology used by the TEI for maintaining its rules. An ODD is an XML document written in a <term>literate programming</term> style, mixing code and explanatory prose. From an ODD and with the use of an <term>ODD Processor</term> you can produce reference documentation as well as schemas. Support for the Processing Model is a significant extension of the TEI ODD and provides and answer to the question of what to do with a text once you have encoded it. Encoding is often the easy part.  For a fuller account of ODD see the chapter on <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/TD.html">Documentation Elements</ref> in the Guidelines. </p>
+        <p>In principle there are a variety of ways in which a processor can use processing instructions encoded in the ODD to produce a readable text, whether a Web page, an epub, or a PDF. In practice <ref target="http://showcases.exist-db.org/exist/apps/tei-simple/index.html">Wolfgang Meier's XQuery based ODD processor</ref>  is the fullest and most thoroughly tested current implementation. From the instructions in the ODD it creates an XQuery Library module that relies heavily on  XQuery's typeswitch, a switch or case statement whose structure lends itself to transforming each processing instruction in the ODD into an XQuery function.  In  a second step the XQuery Library module is used to transform the TEI Simple text.  </p>
         
        
      <div><head>The &lt;model&gt; element with some of its attributes and children</head>
        
        <p>  In the TEI ODD, the specifications for a particular element are recorded
         in an element called <gi>elementSpec</gi>. The processing instructions for each element are kept in one or more <gi>model </gi> elements that are children of &lt;elementSpec&gt;. In the simplest and modal case the processing instruction is recorded as the value of a <att>behaviour</att> attribute:
-        <egXML xmlns="http://www.tei-c.org/ns/Examples"><elementSpec ident="back" mode="change" >
+        <egXML xmlns="http://www.tei-c.org/ns/Examples"><elementSpec ident="back" mode="change">
           <model behaviour="block"/>
         </elementSpec></egXML>
         This means  <q>Apply the behaviour <term>block</term> to the element &lt;back&gt;</q>.
@@ -2753,7 +2743,7 @@ live without God in the world, and only mind earthly things.
         
         <p>A   slightly more complex processing instruction says that the rendering of the source document should be followed but specifies a rendition if there is nothing in the source:
           <egXML xmlns="http://www.tei-c.org/ns/Examples">
-            <elementSpec ident="l" mode="change" >
+            <elementSpec ident="l" mode="change">
             <model behaviour="block" useSourceRendition="true">
               <outputRendition> margin-left: 1em; </outputRendition>
             </model>
@@ -2761,7 +2751,7 @@ live without God in the world, and only mind earthly things.
         </p>
         <p>The <term>behaviour</term> of an element may depend on its attributes or place in the XML hierarchy.  Here is the processing rule that distinguishes between a header row and an ordinary row in a table: 
           
-          <egXML xmlns="http://www.tei-c.org/ns/Examples"><elementSpec ident="row" mode="change" >
+          <egXML xmlns="http://www.tei-c.org/ns/Examples"><elementSpec ident="row" mode="change">
             <model predicate="@role='label'" behaviour="row">
               <outputRendition>font-weight: bold;</outputRendition>
             </model>
@@ -2772,7 +2762,7 @@ live without God in the world, and only mind earthly things.
           
           The  first &lt;model&gt; with its <att>predicate</att> attribute specifies the condition under which you use bold type for text in a table row. The second model specifies the default behaviour. The <gi>desc</gi> element in the second model explains the meaning of <term>row</term> behaviour. It is optional. The next example shows the different treatment of &lt;div&gt;, depending on whether it contains a title-page, is a child element of &lt;front&gt;, &lt;body&gt;, or &lt;back&gt;, or a child element of &lt;div&gt;:
           
-          <egXML xmlns="http://www.tei-c.org/ns/Examples"><elementSpec ident="div" mode="change" >
+          <egXML xmlns="http://www.tei-c.org/ns/Examples"><elementSpec ident="div" mode="change">
             <model predicate="@type='title_page'" behaviour="block">
               <outputRendition>border: 1px solid black; padding: 5px;</outputRendition>
             </model>
@@ -2782,7 +2772,7 @@ live without God in the world, and only mind earthly things.
         
         </p>
         <p>The <gi>param</gi> child of &lt;model&gt; associates  a <term>behaviour</term> with the parameters or objects to which it applies. Thus the processing instruction for &lt;list&gt; tells you that the behaviour <term>list</term> targets items:
-          <egXML xmlns="http://www.tei-c.org/ns/Examples"><elementSpec ident="list" mode="change" >
+          <egXML xmlns="http://www.tei-c.org/ns/Examples"><elementSpec ident="list" mode="change">
             <model predicate="@rendition" behaviour="list" useSourceRendition="true">
               <param name="content">item</param>
             </model>
@@ -2833,7 +2823,7 @@ live without God in the world, and only mind earthly things.
           </list>
           <p>There are several things to be said about this list. First, the names of the <term>behaviours</term> as well as their explanations, will be familiar to programmers who work with texts on the Web. Secondly, there are far fewer behaviours (26) than elements. </p>
           <p>Of the 105  elements in TEI Simple 76 have only one behaviour associated with them. Not quite two dozen elements have two behaviours associated with them. The <term>omit</term> behaviour is used to suppress the display of elements that can occur both in the &lt;teiHeader&gt; and the &lt;text&gt; element, as in the following example:
-            <egXML xmlns="http://www.tei-c.org/ns/Examples"><elementSpec ident="docDate" mode="change" >
+            <egXML xmlns="http://www.tei-c.org/ns/Examples"><elementSpec ident="docDate" mode="change">
               <model predicate="ancestor::teiHeader" behaviour="omit">
                 <desc>Omit if located in teiHeader. </desc>
               </model>
@@ -2843,7 +2833,7 @@ live without God in the world, and only mind earthly things.
             
  Because the processor moves across  &lt;model&gt; elements in the order of their occurrence, it is important to put the more specific condition first. In the following examples the alternatives are stated with equal degrees of explicitness, and the order does not matter:
  
-            <egXML xmlns="http://www.tei-c.org/ns/Examples"><elementSpec ident="list" mode="change" >
+            <egXML xmlns="http://www.tei-c.org/ns/Examples"><elementSpec ident="list" mode="change">
               <model predicate="@rendition" behaviour="list" useSourceRendition="true">
                 <param name="content">item</param>
               </model>
@@ -2856,7 +2846,7 @@ live without God in the world, and only mind earthly things.
           
           <p>Half a dozen elements have more than two models, but <hi>more  </hi>does not necessarily mean <hi>more complex</hi>. Take the &lt;head&gt; element, which can appear in a variety of environments and for which the Processing Model enumerates five explicit cases followed by a default case:
             
-            <egXML xmlns="http://www.tei-c.org/ns/Examples"><elementSpec ident="head" mode="change" >
+            <egXML xmlns="http://www.tei-c.org/ns/Examples"><elementSpec ident="head" mode="change">
               <model predicate="parent::figure" behaviour="block">
                 <outputRendition>font-style: italic;</outputRendition>
               </model>
@@ -2885,7 +2875,7 @@ live without God in the world, and only mind earthly things.
           </list>           
           </p>
           <p>Two elements (<gi>body</gi> and <gi>title</gi> have processing instructions in which several model elements are chained together as a sequence and wrapped in a <gi>modelSequence</gi>. The processing instruction for <gi>body</gi> reads
-          <egXML xmlns="http://www.tei-c.org/ns/Examples"><elementSpec ident="body" mode="change" >
+          <egXML xmlns="http://www.tei-c.org/ns/Examples"><elementSpec ident="body" mode="change">
             <modelSequence>
               <model behaviour="index">
                 <param name="type">'toc'</param>
@@ -2898,7 +2888,7 @@ live without God in the world, and only mind earthly things.
           </p></div>
         
         
-        <div xml:id ='customization'>
+        <div xml:id="customization">
           <head>Customizing the Processing Model</head>
           <p>The point of the Processing Model is to reduce the time and effort it takes to publish a TEI text that meets scholarly standards. Its virtues are Spartan rather than Corinthian. If you can get acceptable results by staying within its rules you probably should. But modifications are possible and will sometimes be necessary. Some of them are easier to achieve than others. 
             A processing instruction like 
@@ -2984,7 +2974,2051 @@ live without God in the world, and only mind earthly things.
           <specGrpRef target="#simplechanges"/>
           <specGrpRef target="#rendition"/>
         </schemaSpec>
-        <include xmlns="http://www.w3.org/2001/XInclude" href="elementsummary.xml"/>
+        <div xmlns="http://www.tei-c.org/ns/1.0" xmlns:XSL="http://www.w3.org/1999/XSL/Transform">
+   <head>Summary</head>
+   <p>A total of 105 elements are selected for use in
+	the <gi>text</gi> part of a document; an additional
+44
+elements are allowed for in the header. The following table
+	shows the usage of all elements in six existing corpora, and
+	classifies them 11 usage groups. There are
+15 elements 
+listed which are <emph>not</emph> allowed in TEI Simple, but should be transformed
+to another element.</p>
+   <table>
+      <row role="label">
+         <cell>Element</cell>
+         <cell>dbnl</cell>
+         <cell>obvil</cell>
+         <cell>cesr</cell>
+         <cell>ota</cell>
+         <cell>dta</cell>
+         <cell>TCP</cell>
+         <cell>Group</cell>
+         <cell>Use instead</cell>
+      </row>
+      <row>
+         <cell>TEI</cell>
+         <cell rend="right">10172</cell>
+         <cell rend="right">126</cell>
+         <cell rend="right">50</cell>
+         <cell rend="right">457</cell>
+         <cell rend="right">848</cell>
+         <cell rend="right">61315</cell>
+         <cell>structure</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>ab</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">290</cell>
+         <cell rend="right">1022</cell>
+         <cell rend="right">60480</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">668</cell>
+         <cell>structure</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>abbr</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">1482</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">69</cell>
+         <cell rend="right">533814</cell>
+         <cell>editorial</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>actor</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">12</cell>
+         <cell rend="right">0</cell>
+         <cell>castlist</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>add</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">71</cell>
+         <cell rend="right">65</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">2441</cell>
+         <cell>editorial</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>addName</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">7</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell/>
+         <cell>
+            <gi>name</gi>
+         </cell>
+      </row>
+      <row>
+         <cell>addSpan</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">2</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">4</cell>
+         <cell>editorial</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>addrLine</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">10</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell>structure</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>address</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">5</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell>structure</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>am</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">166291</cell>
+         <cell>editorial</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>anchor</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">233</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">29</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">4</cell>
+         <cell>structure</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>argument</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">151</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">57</cell>
+         <cell rend="right">2268</cell>
+         <cell rend="right">71478</cell>
+         <cell>wrapper</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>att</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell>header</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>author</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">34</cell>
+         <cell rend="right">83</cell>
+         <cell rend="right">1</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell>interpretation</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>back</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">1</cell>
+         <cell rend="right">29</cell>
+         <cell rend="right">77</cell>
+         <cell rend="right">608</cell>
+         <cell rend="right">24439</cell>
+         <cell>structure</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>bibl</cell>
+         <cell rend="right">3187</cell>
+         <cell rend="right">274</cell>
+         <cell rend="right">155</cell>
+         <cell rend="right">414</cell>
+         <cell rend="right">4362</cell>
+         <cell rend="right">296835</cell>
+         <cell>structure</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>biblFull</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell>header</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>biblScope</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">4</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell>header</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>biblStruct</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell>header</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>body</cell>
+         <cell rend="right">10171</cell>
+         <cell rend="right">126</cell>
+         <cell rend="right">50</cell>
+         <cell rend="right">688</cell>
+         <cell rend="right">1155</cell>
+         <cell rend="right">106968</cell>
+         <cell>structure</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>byline</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">17</cell>
+         <cell rend="right">8</cell>
+         <cell rend="right">619</cell>
+         <cell rend="right">1028</cell>
+         <cell rend="right">12525</cell>
+         <cell>wrapper</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>c</cell>
+         <cell rend="right">8966</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell>linguistic</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>caesura</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">30299</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell> </cell>
+         <cell>
+            <gi>milestone</gi>
+         </cell>
+      </row>
+      <row>
+         <cell>castGroup</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">29</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">51</cell>
+         <cell rend="right">0</cell>
+         <cell>castlist</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>castItem</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">63</cell>
+         <cell rend="right">90</cell>
+         <cell rend="right">744</cell>
+         <cell rend="right">0</cell>
+         <cell>castlist</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>castList</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">28</cell>
+         <cell rend="right">4</cell>
+         <cell rend="right">74</cell>
+         <cell rend="right">0</cell>
+         <cell>castlist</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>cb</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">66</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">26294</cell>
+         <cell rend="right">0</cell>
+         <cell>structure</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>cell</cell>
+         <cell rend="right">5895818</cell>
+         <cell rend="right">242</cell>
+         <cell rend="right">3218</cell>
+         <cell rend="right">1282</cell>
+         <cell rend="right">34153</cell>
+         <cell rend="right">3455220</cell>
+         <cell>table</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>change</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell>header</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>charDecl</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell>header</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>charProp</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell>header</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>choice</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">61228</cell>
+         <cell rend="right">770</cell>
+         <cell rend="right">8799</cell>
+         <cell rend="right">4106</cell>
+         <cell>editorial</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>cit</cell>
+         <cell rend="right">3209</cell>
+         <cell rend="right">12</cell>
+         <cell rend="right">99</cell>
+         <cell rend="right">155</cell>
+         <cell rend="right">5431</cell>
+         <cell rend="right">0</cell>
+         <cell>structure</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>closer</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">35</cell>
+         <cell rend="right">88</cell>
+         <cell rend="right">1430</cell>
+         <cell rend="right">122281</cell>
+         <cell>wrapper</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>code</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">1</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell> </cell>
+         <cell>
+            <gi>hi</gi>
+         </cell>
+      </row>
+      <row>
+         <cell>corr</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">3103</cell>
+         <cell rend="right">505</cell>
+         <cell rend="right">5966</cell>
+         <cell rend="right">0</cell>
+         <cell>editorial</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>country</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">1</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell> </cell>
+         <cell>
+            <gi>name</gi>
+         </cell>
+      </row>
+      <row>
+         <cell>date</cell>
+         <cell rend="right">7842</cell>
+         <cell rend="right">47</cell>
+         <cell rend="right">119</cell>
+         <cell rend="right">61</cell>
+         <cell rend="right">112</cell>
+         <cell rend="right">64488</cell>
+         <cell>interpretation</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>dateline</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">382</cell>
+         <cell rend="right">1</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">2264</cell>
+         <cell rend="right">53370</cell>
+         <cell>wrapper</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>del</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">62</cell>
+         <cell rend="right">15</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">7</cell>
+         <cell>editorial</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>desc</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">186</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">241</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">6878050</cell>
+         <cell>editorial</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>div</cell>
+         <cell rend="right">1856262</cell>
+         <cell rend="right">4584</cell>
+         <cell rend="right">2128</cell>
+         <cell rend="right">16744</cell>
+         <cell rend="right">104832</cell>
+         <cell rend="right">1564908</cell>
+         <cell>structure</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>docAuthor</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">14</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">381</cell>
+         <cell rend="right">823</cell>
+         <cell rend="right">0</cell>
+         <cell>titlepage</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>docDate</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">388</cell>
+         <cell rend="right">44</cell>
+         <cell rend="right">6</cell>
+         <cell rend="right">899</cell>
+         <cell rend="right">0</cell>
+         <cell>titlepage</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>docEdition</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">1</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">14</cell>
+         <cell rend="right">0</cell>
+         <cell>titlepage</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>docImprint</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">46</cell>
+         <cell rend="right">223</cell>
+         <cell rend="right">946</cell>
+         <cell rend="right">0</cell>
+         <cell>titlepage</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>docTitle</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">1</cell>
+         <cell rend="right">48</cell>
+         <cell rend="right">349</cell>
+         <cell rend="right">1156</cell>
+         <cell rend="right">0</cell>
+         <cell>titlepage</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>editor</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell>header</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>editorialDecl</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell>header</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>email</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell>header</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>emph</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">1090</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">6711</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell> </cell>
+         <cell>
+            <gi>hi</gi>
+         </cell>
+      </row>
+      <row>
+         <cell>encodingDesc</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell>header</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>epigraph</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">2</cell>
+         <cell rend="right">2</cell>
+         <cell rend="right">487</cell>
+         <cell rend="right">137</cell>
+         <cell rend="right">45743</cell>
+         <cell>wrapper</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>ex</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">166291</cell>
+         <cell>editorial</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>expan</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">1837</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">69</cell>
+         <cell rend="right">170397</cell>
+         <cell>editorial</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>extent</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell>header</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>figDesc</cell>
+         <cell rend="right">151116</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">55</cell>
+         <cell rend="right">87</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">27314</cell>
+         <cell>pictures</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>figure</cell>
+         <cell rend="right">329174</cell>
+         <cell rend="right">206</cell>
+         <cell rend="right">480</cell>
+         <cell rend="right">227</cell>
+         <cell rend="right">16866</cell>
+         <cell rend="right">95853</cell>
+         <cell>pictures</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>fileDesc</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell>header</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>floatingText</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">1</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">61</cell>
+         <cell rend="right">307</cell>
+         <cell rend="right">40502</cell>
+         <cell>structure</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>foreign</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">46</cell>
+         <cell rend="right">3348</cell>
+         <cell rend="right">2365</cell>
+         <cell rend="right">1929</cell>
+         <cell rend="right">0</cell>
+         <cell>interpretation</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>forename</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">1</cell>
+         <cell rend="right">35</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell> </cell>
+         <cell>
+            <gi>name</gi>
+         </cell>
+      </row>
+      <row>
+         <cell>formula</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">25670</cell>
+         <cell rend="right">0</cell>
+         <cell>structure</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>front</cell>
+         <cell rend="right">13</cell>
+         <cell rend="right">25</cell>
+         <cell rend="right">48</cell>
+         <cell rend="right">380</cell>
+         <cell rend="right">851</cell>
+         <cell rend="right">49991</cell>
+         <cell>structure</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>fw</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">20554</cell>
+         <cell rend="right">15</cell>
+         <cell rend="right">336239</cell>
+         <cell rend="right">1268</cell>
+         <cell>structure</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>g</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">1012</cell>
+         <cell rend="right">489</cell>
+         <cell rend="right">493</cell>
+         <cell rend="right">915406</cell>
+         <cell>character</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>gap</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">18</cell>
+         <cell rend="right">293</cell>
+         <cell rend="right">5731</cell>
+         <cell rend="right">6878505</cell>
+         <cell>editorial</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>genName</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">7</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell> </cell>
+         <cell>
+            <gi>name</gi>
+         </cell>
+      </row>
+      <row>
+         <cell>gi</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell>header</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>glyph</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell>header</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>glyphName</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell>header</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>graphic</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">22</cell>
+         <cell rend="right">362</cell>
+         <cell rend="right">199</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell>pictures</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>group</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">20</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">2789</cell>
+         <cell>structure</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>handShift</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell>editorial</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>head</cell>
+         <cell rend="right">1958142</cell>
+         <cell rend="right">4961</cell>
+         <cell rend="right">2526</cell>
+         <cell rend="right">14508</cell>
+         <cell rend="right">117506</cell>
+         <cell rend="right">1811315</cell>
+         <cell>structure</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>hi</cell>
+         <cell rend="right">21179130</cell>
+         <cell rend="right">56953</cell>
+         <cell rend="right">9424</cell>
+         <cell rend="right">134872</cell>
+         <cell rend="right">2367314</cell>
+         <cell rend="right">57472111</cell>
+         <cell>interpretation</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>idno</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell>header</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>imprimatur</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">25</cell>
+         <cell rend="right">23</cell>
+         <cell rend="right">63</cell>
+         <cell rend="right">0</cell>
+         <cell>titlepage</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>imprint</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell>header</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>item</cell>
+         <cell rend="right">3125926</cell>
+         <cell rend="right">2023</cell>
+         <cell rend="right">1806</cell>
+         <cell rend="right">12400</cell>
+         <cell rend="right">187951</cell>
+         <cell rend="right">3779020</cell>
+         <cell>structure</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>keywords</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell>header</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>l</cell>
+         <cell rend="right">11532201</cell>
+         <cell rend="right">21004</cell>
+         <cell rend="right">39828</cell>
+         <cell rend="right">268768</cell>
+         <cell rend="right">557846</cell>
+         <cell rend="right">11307818</cell>
+         <cell>structure</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>label</cell>
+         <cell rend="right">483377</cell>
+         <cell rend="right">621</cell>
+         <cell rend="right">469</cell>
+         <cell rend="right">1712</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">618039</cell>
+         <cell>structure</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>lb</cell>
+         <cell rend="right">1352720</cell>
+         <cell rend="right">3008</cell>
+         <cell rend="right">237202</cell>
+         <cell rend="right">233546</cell>
+         <cell rend="right">9689271</cell>
+         <cell rend="right">24097</cell>
+         <cell>structure</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>lg</cell>
+         <cell rend="right">528349</cell>
+         <cell rend="right">316</cell>
+         <cell rend="right">4481</cell>
+         <cell rend="right">5790</cell>
+         <cell rend="right">84157</cell>
+         <cell rend="right">791590</cell>
+         <cell>structure</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>licence</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell>header</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>list</cell>
+         <cell rend="right">272365</cell>
+         <cell rend="right">621</cell>
+         <cell rend="right">115</cell>
+         <cell rend="right">526</cell>
+         <cell rend="right">24877</cell>
+         <cell rend="right">407478</cell>
+         <cell>structure</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>listBibl</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">1</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">26</cell>
+         <cell rend="right">0</cell>
+         <cell>structure</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>listChange</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell>header</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>listPerson</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell>header</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>localName</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell>header</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>measure</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell>interpretation</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>milestone</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">46</cell>
+         <cell rend="right">13</cell>
+         <cell rend="right">4881</cell>
+         <cell rend="right">49313</cell>
+         <cell rend="right">0</cell>
+         <cell>structure</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>monogr</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell>header</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>msDesc</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell>header</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>msIdentifier</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell>header</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>name</cell>
+         <cell rend="right">536288</cell>
+         <cell rend="right">12265</cell>
+         <cell rend="right">32997</cell>
+         <cell rend="right">2541</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell>interpretation</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>nameLink</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">18</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell> </cell>
+         <cell>
+            <gi>name</gi>
+         </cell>
+      </row>
+      <row>
+         <cell>note</cell>
+         <cell rend="right">2705214</cell>
+         <cell rend="right">9451</cell>
+         <cell rend="right">2874</cell>
+         <cell rend="right">4965</cell>
+         <cell rend="right">187675</cell>
+         <cell rend="right">5710304</cell>
+         <cell>structure</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>num</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">862</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell>interpretation</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>opener</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">2</cell>
+         <cell rend="right">21</cell>
+         <cell rend="right">513</cell>
+         <cell rend="right">77640</cell>
+         <cell>wrapper</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>orgName</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">30</cell>
+         <cell rend="right">4607</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell> </cell>
+         <cell>
+            <gi>name</gi>
+         </cell>
+      </row>
+      <row>
+         <cell>orig</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">57301</cell>
+         <cell rend="right">274</cell>
+         <cell rend="right">2769</cell>
+         <cell rend="right">0</cell>
+         <cell>editorial</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>p</cell>
+         <cell rend="right">12413479</cell>
+         <cell rend="right">68273</cell>
+         <cell rend="right">4855</cell>
+         <cell rend="right">391507</cell>
+         <cell rend="right">607881</cell>
+         <cell rend="right">11892546</cell>
+         <cell>structure</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>pb</cell>
+         <cell rend="right">2814727</cell>
+         <cell rend="right">6156</cell>
+         <cell rend="right">9497</cell>
+         <cell rend="right">22352</cell>
+         <cell rend="right">311001</cell>
+         <cell rend="right">5424219</cell>
+         <cell>structure</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>pc</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">230</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell>linguistic</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>persName</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">4045</cell>
+         <cell rend="right">662</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">26217</cell>
+         <cell rend="right">0</cell>
+         <cell> </cell>
+         <cell>
+            <gi>name</gi>
+         </cell>
+      </row>
+      <row>
+         <cell>person</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell>header</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>physDesc</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell>header</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>placeName</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">386</cell>
+         <cell rend="right">11646</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">18652</cell>
+         <cell rend="right">0</cell>
+         <cell> </cell>
+         <cell>
+            <gi>name</gi>
+         </cell>
+      </row>
+      <row>
+         <cell>postscript</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">17</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">133</cell>
+         <cell rend="right">6142</cell>
+         <cell>wrapper</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>profileDesc</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell>header</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>ptr</cell>
+         <cell rend="right">376134</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">180</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">635</cell>
+         <cell> </cell>
+         <cell>
+            <gi>ref</gi>
+         </cell>
+      </row>
+      <row>
+         <cell>pubPlace</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">37</cell>
+         <cell rend="right">2</cell>
+         <cell rend="right">918</cell>
+         <cell rend="right">0</cell>
+         <cell>titlepage</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>publicationStmt</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell>header</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>publisher</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">2</cell>
+         <cell rend="right">35</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">910</cell>
+         <cell rend="right">0</cell>
+         <cell>titlepage</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>q</cell>
+         <cell rend="right">212432</cell>
+         <cell rend="right">4270</cell>
+         <cell rend="right">29</cell>
+         <cell rend="right">5829</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">695548</cell>
+         <cell>interpretation</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>quote</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">5459</cell>
+         <cell rend="right">270</cell>
+         <cell rend="right">2597</cell>
+         <cell rend="right">5744</cell>
+         <cell rend="right">0</cell>
+         <cell>interpretation</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>ref</cell>
+         <cell rend="right">537332</cell>
+         <cell rend="right">240</cell>
+         <cell rend="right">1119</cell>
+         <cell rend="right">1240</cell>
+         <cell rend="right">140328</cell>
+         <cell rend="right">3541</cell>
+         <cell>interpretation</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>reg</cell>
+         <cell rend="right">442</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">57311</cell>
+         <cell rend="right">274</cell>
+         <cell rend="right">2765</cell>
+         <cell rend="right">0</cell>
+         <cell>editorial</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>relatedItem</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell>header</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>repository</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell>header</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>resp</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell>header</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>respStmt</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell>header</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>rhyme</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell>interpretation</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>role</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">33</cell>
+         <cell rend="right">31</cell>
+         <cell rend="right">735</cell>
+         <cell rend="right">0</cell>
+         <cell>castlist</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>roleDesc</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">9</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">70</cell>
+         <cell rend="right">0</cell>
+         <cell>castlist</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>roleName</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">70</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell> </cell>
+         <cell>
+            <gi>name</gi>
+         </cell>
+      </row>
+      <row>
+         <cell>row</cell>
+         <cell rend="right">2064752</cell>
+         <cell rend="right">70</cell>
+         <cell rend="right">1311</cell>
+         <cell rend="right">327</cell>
+         <cell rend="right">12571</cell>
+         <cell rend="right">799618</cell>
+         <cell>table</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>rs</cell>
+         <cell rend="right">1</cell>
+         <cell rend="right">5</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell>interpretation</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>s</cell>
+         <cell rend="right">1</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell>linguistic</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>salute</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">11</cell>
+         <cell rend="right">10</cell>
+         <cell rend="right">97</cell>
+         <cell rend="right">2490</cell>
+         <cell rend="right">64544</cell>
+         <cell>wrapper</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>seg</cell>
+         <cell rend="right">46611</cell>
+         <cell rend="right">47</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">10304</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">148733</cell>
+         <cell>interpretation</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>sic</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">3707</cell>
+         <cell rend="right">534</cell>
+         <cell rend="right">5960</cell>
+         <cell rend="right">0</cell>
+         <cell>editorial</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>signed</cell>
+         <cell rend="right">93</cell>
+         <cell rend="right">33</cell>
+         <cell rend="right">37</cell>
+         <cell rend="right">118</cell>
+         <cell rend="right">48</cell>
+         <cell rend="right">106105</cell>
+         <cell>wrapper</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>soCalled</cell>
+         <cell rend="right">2</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">12</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell> </cell>
+         <cell>
+            <gi>q</gi>
+         </cell>
+      </row>
+      <row>
+         <cell>sourceDesc</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell>header</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>sp</cell>
+         <cell rend="right">320117</cell>
+         <cell rend="right">12</cell>
+         <cell rend="right">1997</cell>
+         <cell rend="right">76237</cell>
+         <cell rend="right">42050</cell>
+         <cell rend="right">1661335</cell>
+         <cell>structure</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>spGrp</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">35</cell>
+         <cell rend="right">0</cell>
+         <cell>structure</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>space</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">1044</cell>
+         <cell rend="right">19559</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">20962</cell>
+         <cell rend="right">0</cell>
+         <cell>editorial</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>speaker</cell>
+         <cell rend="right">304183</cell>
+         <cell rend="right">12</cell>
+         <cell rend="right">1978</cell>
+         <cell rend="right">76198</cell>
+         <cell rend="right">42021</cell>
+         <cell rend="right">1652394</cell>
+         <cell>structure</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>stage</cell>
+         <cell rend="right">60645</cell>
+         <cell rend="right">39</cell>
+         <cell rend="right">17</cell>
+         <cell rend="right">10195</cell>
+         <cell rend="right">14041</cell>
+         <cell rend="right">246384</cell>
+         <cell>structure</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>subst</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">11</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">2</cell>
+         <cell>editorial</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>supplied</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">34</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">11095</cell>
+         <cell rend="right">0</cell>
+         <cell>editorial</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>surname</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">490</cell>
+         <cell rend="right">38</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell> </cell>
+         <cell>
+            <gi>name</gi>
+         </cell>
+      </row>
+      <row>
+         <cell>table</cell>
+         <cell rend="right">164693</cell>
+         <cell rend="right">7</cell>
+         <cell rend="right">103</cell>
+         <cell rend="right">19</cell>
+         <cell rend="right">5219</cell>
+         <cell rend="right">43935</cell>
+         <cell>table</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>tag</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell>header</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>teiCorpus</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell>structure</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>teiHeader</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell>header</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>term</cell>
+         <cell rend="right">1451</cell>
+         <cell rend="right">113</cell>
+         <cell rend="right">181</cell>
+         <cell rend="right">51</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell>header</cell>
+         <cell>
+            <gi>seg</gi>
+         </cell>
+      </row>
+      <row>
+         <cell>text</cell>
+         <cell rend="right">10171</cell>
+         <cell rend="right">126</cell>
+         <cell rend="right">50</cell>
+         <cell rend="right">645</cell>
+         <cell rend="right">848</cell>
+         <cell rend="right">69238</cell>
+         <cell>structure</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>textClass</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell>header</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>textDesc</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell>header</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>time</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell>interpretation</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>title</cell>
+         <cell rend="right">208735</cell>
+         <cell rend="right">6583</cell>
+         <cell rend="right">88</cell>
+         <cell rend="right">265</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell>structure</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>titlePage</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">1</cell>
+         <cell rend="right">48</cell>
+         <cell rend="right">359</cell>
+         <cell rend="right">1097</cell>
+         <cell rend="right">0</cell>
+         <cell>titlepage</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>titlePart</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">1</cell>
+         <cell rend="right">85</cell>
+         <cell rend="right">467</cell>
+         <cell rend="right">2399</cell>
+         <cell rend="right">0</cell>
+         <cell>titlepage</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>titleStmt</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell>header</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>trailer</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">2</cell>
+         <cell rend="right">104</cell>
+         <cell rend="right">230</cell>
+         <cell rend="right">363</cell>
+         <cell rend="right">69313</cell>
+         <cell>wrapper</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>typeDesc</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell>header</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>unclear</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">1</cell>
+         <cell rend="right">117</cell>
+         <cell rend="right">2658</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">4038</cell>
+         <cell>editorial</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>val</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell>header</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>value</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell>header</cell>
+         <cell/>
+      </row>
+      <row>
+         <cell>w</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell rend="right">0</cell>
+         <cell>linguistic</cell>
+         <cell/>
+      </row>
+   </table>
+   <list type="gloss">
+      <label>castlist</label>
+      <item>
+         <gi>actor</gi> 
+         <gi>castGroup</gi> 
+         <gi>castItem</gi> 
+         <gi>castList</gi> 
+         <gi>role</gi> 
+         <gi>roleDesc</gi> 
+      </item>
+      <label>character</label>
+      <item>
+         <gi>g</gi> 
+      </item>
+      <label>editorial</label>
+      <item>
+         <gi>abbr</gi> 
+         <gi>add</gi> 
+         <gi>addSpan</gi> 
+         <gi>am</gi> 
+         <gi>choice</gi> 
+         <gi>corr</gi> 
+         <gi>del</gi> 
+         <gi>desc</gi> 
+         <gi>ex</gi> 
+         <gi>expan</gi> 
+         <gi>gap</gi> 
+         <gi>handShift</gi> 
+         <gi>orig</gi> 
+         <gi>reg</gi> 
+         <gi>sic</gi> 
+         <gi>space</gi> 
+         <gi>subst</gi> 
+         <gi>supplied</gi> 
+         <gi>unclear</gi> 
+      </item>
+      <label>header</label>
+      <item>
+         <gi>att</gi> 
+         <gi>biblFull</gi> 
+         <gi>biblScope</gi> 
+         <gi>biblStruct</gi> 
+         <gi>change</gi> 
+         <gi>charDecl</gi> 
+         <gi>charProp</gi> 
+         <gi>editor</gi> 
+         <gi>editorialDecl</gi> 
+         <gi>email</gi> 
+         <gi>encodingDesc</gi> 
+         <gi>extent</gi> 
+         <gi>fileDesc</gi> 
+         <gi>gi</gi> 
+         <gi>glyph</gi> 
+         <gi>glyphName</gi> 
+         <gi>idno</gi> 
+         <gi>imprint</gi> 
+         <gi>keywords</gi> 
+         <gi>licence</gi> 
+         <gi>listChange</gi> 
+         <gi>listPerson</gi> 
+         <gi>localName</gi> 
+         <gi>monogr</gi> 
+         <gi>msDesc</gi> 
+         <gi>msIdentifier</gi> 
+         <gi>person</gi> 
+         <gi>physDesc</gi> 
+         <gi>profileDesc</gi> 
+         <gi>publicationStmt</gi> 
+         <gi>relatedItem</gi> 
+         <gi>repository</gi> 
+         <gi>resp</gi> 
+         <gi>respStmt</gi> 
+         <gi>sourceDesc</gi> 
+         <gi>tag</gi> 
+         <gi>teiHeader</gi> 
+         <gi>term</gi> 
+         <gi>textClass</gi> 
+         <gi>textDesc</gi> 
+         <gi>titleStmt</gi> 
+         <gi>typeDesc</gi> 
+         <gi>val</gi> 
+         <gi>value</gi> 
+      </item>
+      <label>interpretation</label>
+      <item>
+         <gi>author</gi> 
+         <gi>date</gi> 
+         <gi>foreign</gi> 
+         <gi>hi</gi> 
+         <gi>measure</gi> 
+         <gi>name</gi> 
+         <gi>num</gi> 
+         <gi>q</gi> 
+         <gi>quote</gi> 
+         <gi>ref</gi> 
+         <gi>rhyme</gi> 
+         <gi>rs</gi> 
+         <gi>seg</gi> 
+         <gi>time</gi> 
+      </item>
+      <label>linguistic</label>
+      <item>
+         <gi>c</gi> 
+         <gi>pc</gi> 
+         <gi>s</gi> 
+         <gi>w</gi> 
+      </item>
+      <label>pictures</label>
+      <item>
+         <gi>figDesc</gi> 
+         <gi>figure</gi> 
+         <gi>graphic</gi> 
+      </item>
+      <label>structure</label>
+      <item>
+         <gi>ab</gi> 
+         <gi>address</gi> 
+         <gi>addrLine</gi> 
+         <gi>anchor</gi> 
+         <gi>back</gi> 
+         <gi>bibl</gi> 
+         <gi>body</gi> 
+         <gi>cb</gi> 
+         <gi>cit</gi> 
+         <gi>div</gi> 
+         <gi>floatingText</gi> 
+         <gi>formula</gi> 
+         <gi>front</gi> 
+         <gi>fw</gi> 
+         <gi>group</gi> 
+         <gi>head</gi> 
+         <gi>item</gi> 
+         <gi>l</gi> 
+         <gi>label</gi> 
+         <gi>lb</gi> 
+         <gi>lg</gi> 
+         <gi>list</gi> 
+         <gi>listBibl</gi> 
+         <gi>milestone</gi> 
+         <gi>note</gi> 
+         <gi>p</gi> 
+         <gi>pb</gi> 
+         <gi>sp</gi> 
+         <gi>speaker</gi> 
+         <gi>spGrp</gi> 
+         <gi>stage</gi> 
+         <gi>TEI</gi> 
+         <gi>teiCorpus</gi> 
+         <gi>text</gi> 
+         <gi>title</gi> 
+      </item>
+      <label>table</label>
+      <item>
+         <gi>cell</gi> 
+         <gi>row</gi> 
+         <gi>table</gi> 
+      </item>
+      <label>titlepage</label>
+      <item>
+         <gi>docAuthor</gi> 
+         <gi>docDate</gi> 
+         <gi>docEdition</gi> 
+         <gi>docImprint</gi> 
+         <gi>docTitle</gi> 
+         <gi>imprimatur</gi> 
+         <gi>publisher</gi> 
+         <gi>pubPlace</gi> 
+         <gi>titlePage</gi> 
+         <gi>titlePart</gi> 
+      </item>
+      <label>wrapper</label>
+      <item>
+         <gi>argument</gi> 
+         <gi>byline</gi> 
+         <gi>closer</gi> 
+         <gi>dateline</gi> 
+         <gi>epigraph</gi> 
+         <gi>opener</gi> 
+         <gi>postscript</gi> 
+         <gi>salute</gi> 
+         <gi>signed</gi> 
+         <gi>trailer</gi> 
+      </item>
+   </list>
+</div>
         <div>
           <head>The TEI infrastructure</head>
           <specGrp xml:id="base">
@@ -2996,12 +5030,64 @@ live without God in the world, and only mind earthly things.
           <p>The default set of elements for the header are loaded using the <term>header</term> module. In addition,
             elements from other modules are loaded, if they are tagged in the classification as being needed for the
             header only.</p>
-          <include xmlns="http://www.w3.org/2001/XInclude" href="headerelements.xml"/>
+          <specGrp xmlns="http://www.tei-c.org/ns/1.0" xmlns:XSL="http://www.w3.org/1999/XSL/Transform" xml:id="header">
+   <moduleRef key="header"/>
+   <elementRef key="att"/>
+   <elementRef key="biblFull"/>
+   <elementRef key="biblScope"/>
+   <elementRef key="biblStruct"/>
+   <elementRef key="change"/>
+   <elementRef key="charDecl"/>
+   <elementRef key="charProp"/>
+   <elementRef key="editor"/>
+   <elementRef key="editorialDecl"/>
+   <elementRef key="email"/>
+   <elementRef key="encodingDesc"/>
+   <elementRef key="extent"/>
+   <elementRef key="fileDesc"/>
+   <elementRef key="gi"/>
+   <elementRef key="glyph"/>
+   <elementRef key="glyphName"/>
+   <elementRef key="idno"/>
+   <elementRef key="imprint"/>
+   <elementRef key="keywords"/>
+   <elementRef key="licence"/>
+   <elementRef key="listChange"/>
+   <elementRef key="listPerson"/>
+   <elementRef key="localName"/>
+   <elementRef key="monogr"/>
+   <elementRef key="msDesc"/>
+   <elementRef key="msIdentifier"/>
+   <elementRef key="person"/>
+   <elementRef key="physDesc"/>
+   <elementRef key="profileDesc"/>
+   <elementRef key="publicationStmt"/>
+   <elementRef key="relatedItem"/>
+   <elementRef key="repository"/>
+   <elementRef key="resp"/>
+   <elementRef key="respStmt"/>
+   <elementRef key="sourceDesc"/>
+   <elementRef key="tag"/>
+   <elementRef key="teiHeader"/>
+   <elementRef key="term"/>
+   <elementRef key="textClass"/>
+   <elementRef key="textDesc"/>
+   <elementRef key="titleStmt"/>
+   <elementRef key="typeDesc"/>
+   <elementRef key="val"/>
+   <elementRef key="value"/>
+</specGrp>
           <specGrp xml:id="header2">
             <p>Elements which are only intended to be used in the header are banned from the <gi>text</gi>, using a
               Schematron rule.</p>
             <elementSpec ident="text" mode="change">
-              <include xmlns="http://www.w3.org/2001/XInclude" href="headeronly.xml"/>
+              <constraintSpec xmlns="http://www.tei-c.org/ns/1.0" xmlns:XSL="http://www.w3.org/1999/XSL/Transform" ident="headeronlyelement" scheme="isoschematron">
+   <constraint>
+      <rule xmlns="http://purl.oclc.org/dsdl/schematron" context="tei:att | tei:biblFull | tei:biblScope | tei:biblStruct | tei:change | tei:charDecl | tei:charProp | tei:editor | tei:editorialDecl | tei:email | tei:encodingDesc | tei:extent | tei:fileDesc | tei:gi | tei:glyph | tei:glyphName | tei:idno | tei:imprint | tei:keywords | tei:licence | tei:listChange | tei:listPerson | tei:localName | tei:monogr | tei:msDesc | tei:msIdentifier | tei:person | tei:physDesc | tei:profileDesc | tei:publicationStmt | tei:relatedItem | tei:repository | tei:resp | tei:respStmt | tei:sourceDesc | tei:tag | tei:teiHeader | tei:term | tei:textClass | tei:textDesc | tei:titleStmt | tei:typeDesc | tei:val | tei:value">
+         <report test="ancestor::tei:text">Error:  The element <name/> is not permitted outside the header</report>
+      </rule>
+   </constraint>
+</constraintSpec>
             </elementSpec>
           </specGrp>
         </div>
@@ -3059,11 +5145,8 @@ live without God in the world, and only mind earthly things.
                   <constraintSpec ident="validtarget" scheme="isoschematron">
                     <constraint>
                       <rule xmlns="http://purl.oclc.org/dsdl/schematron" context="tei:*[@target]">
-                        <let name="results"
-                          value="for $t in        tokenize(normalize-space(@target),'\s+') return starts-with($t,'#') and not(id(substring($t,2)))"/>
-                        <report test="some $x in $results  satisfies $x"> Error: Every local pointer in "<value-of
-                            select="@target"/>" must point to an ID in this document (<value-of select="$results"
-                          />)</report>
+                        <let name="results" value="for $t in        tokenize(normalize-space(@target),'\s+') return starts-with($t,'#') and not(id(substring($t,2)))"/>
+                        <report test="some $x in $results  satisfies $x"> Error: Every local pointer in "<value-of select="@target"/>" must point to an ID in this document (<value-of select="$results"/>)</report>
                       </rule>
                     </constraint>
                   </constraintSpec>
@@ -3207,22 +5290,16 @@ live without God in the world, and only mind earthly things.
               <constraintSpec ident="renditionpointer" scheme="isoschematron">
                 <constraint>
                   <rule xmlns="http://purl.oclc.org/dsdl/schematron" context="tei:*[@rendition]">
-                    <let name="results"
-                      value="for $val in tokenize(normalize-space(@rendition),'\s+') return        starts-with($val,'simple:')        or        (starts-with($val,'#')        and        //tei:rendition[@xml:id=substring($val,2)])"/>
-                    <assert test="every $x in $results satisfies $x"> Error: Each of the rendition values in "<value-of
-                        select="@rendition"/>" must point to a local ID or to a token in the Simple scheme (<value-of
-                        select="$results"/>)</assert>
+                    <let name="results" value="for $val in tokenize(normalize-space(@rendition),'\s+') return        starts-with($val,'simple:')        or        (starts-with($val,'#')        and        //tei:rendition[@xml:id=substring($val,2)])"/>
+                    <assert test="every $x in $results satisfies $x"> Error: Each of the rendition values in "<value-of select="@rendition"/>" must point to a local ID or to a token in the Simple scheme (<value-of select="$results"/>)</assert>
                   </rule>
                 </constraint>
               </constraintSpec>
               <constraintSpec ident="corresppointer" scheme="isoschematron">
                 <constraint>
                   <rule xmlns="http://purl.oclc.org/dsdl/schematron" context="tei:*[@corresp]">
-                    <let name="results"
-                      value="for $t in        tokenize(normalize-space(@corresp),'\s+') return starts-with($t,'#') and not(id(substring($t,2)))"/>
-                    <report test="some $x in $results  satisfies $x"> Error: Every local pointer in "<value-of
-                        select="@corresp"/>" must point to an ID in this document (<value-of select="$results"
-                      />)</report>
+                    <let name="results" value="for $t in        tokenize(normalize-space(@corresp),'\s+') return starts-with($t,'#') and not(id(substring($t,2)))"/>
+                    <report test="some $x in $results  satisfies $x"> Error: Every local pointer in "<value-of select="@corresp"/>" must point to an ID in this document (<value-of select="$results"/>)</report>
                   </rule>
                 </constraint>
               </constraintSpec>
@@ -3400,71 +5477,175 @@ live without God in the world, and only mind earthly things.
         <div>
           <head>Elements</head>
           <p>The main part of Simple is the set of selected elements.</p>
-          <include xmlns="http://www.w3.org/2001/XInclude" href="simpleelements.xml"/>
-          <specGrp xmlns="http://www.tei-c.org/ns/1.0" xmlns:XSL="http://www.w3.org/1999/XSL/Transform"
-            xml:id="simpleelementspm">
-            <elementSpec ident="ab" mode="change" >
+          <specGrp xmlns="http://www.tei-c.org/ns/1.0" xmlns:XSL="http://www.w3.org/1999/XSL/Transform" xml:id="simpleelements">
+   <elementRef key="ab"/>
+   <elementRef key="abbr"/>
+   <elementRef key="actor"/>
+   <elementRef key="add"/>
+   <elementRef key="address"/>
+   <elementRef key="addrLine"/>
+   <elementRef key="addSpan"/>
+   <elementRef key="am"/>
+   <elementRef key="anchor"/>
+   <elementRef key="argument"/>
+   <elementRef key="author"/>
+   <elementRef key="back"/>
+   <elementRef key="bibl"/>
+   <elementRef key="body"/>
+   <elementRef key="byline"/>
+   <elementRef key="c"/>
+   <elementRef key="castGroup"/>
+   <elementRef key="castItem"/>
+   <elementRef key="castList"/>
+   <elementRef key="cb"/>
+   <elementRef key="cell"/>
+   <elementRef key="choice"/>
+   <elementRef key="cit"/>
+   <elementRef key="closer"/>
+   <elementRef key="corr"/>
+   <elementRef key="date"/>
+   <elementRef key="dateline"/>
+   <elementRef key="del"/>
+   <elementRef key="desc"/>
+   <elementRef key="div"/>
+   <elementRef key="docAuthor"/>
+   <elementRef key="docDate"/>
+   <elementRef key="docEdition"/>
+   <elementRef key="docImprint"/>
+   <elementRef key="docTitle"/>
+   <elementRef key="epigraph"/>
+   <elementRef key="ex"/>
+   <elementRef key="expan"/>
+   <elementRef key="figDesc"/>
+   <elementRef key="figure"/>
+   <elementRef key="floatingText"/>
+   <elementRef key="foreign"/>
+   <elementRef key="formula"/>
+   <elementRef key="front"/>
+   <elementRef key="fw"/>
+   <elementRef key="g"/>
+   <elementRef key="gap"/>
+   <elementRef key="graphic"/>
+   <elementRef key="group"/>
+   <elementRef key="handShift"/>
+   <elementRef key="head"/>
+   <elementRef key="hi"/>
+   <elementRef key="imprimatur"/>
+   <elementRef key="item"/>
+   <elementRef key="l"/>
+   <elementRef key="label"/>
+   <elementRef key="lb"/>
+   <elementRef key="lg"/>
+   <elementRef key="list"/>
+   <elementRef key="listBibl"/>
+   <elementRef key="measure"/>
+   <elementRef key="milestone"/>
+   <elementRef key="name"/>
+   <elementRef key="note"/>
+   <elementRef key="num"/>
+   <elementRef key="opener"/>
+   <elementRef key="orig"/>
+   <elementRef key="p"/>
+   <elementRef key="pb"/>
+   <elementRef key="pc"/>
+   <elementRef key="postscript"/>
+   <elementRef key="publisher"/>
+   <elementRef key="pubPlace"/>
+   <elementRef key="q"/>
+   <elementRef key="quote"/>
+   <elementRef key="ref"/>
+   <elementRef key="reg"/>
+   <elementRef key="rhyme"/>
+   <elementRef key="role"/>
+   <elementRef key="roleDesc"/>
+   <elementRef key="row"/>
+   <elementRef key="rs"/>
+   <elementRef key="s"/>
+   <elementRef key="salute"/>
+   <elementRef key="seg"/>
+   <elementRef key="sic"/>
+   <elementRef key="signed"/>
+   <elementRef key="sp"/>
+   <elementRef key="space"/>
+   <elementRef key="speaker"/>
+   <elementRef key="spGrp"/>
+   <elementRef key="stage"/>
+   <elementRef key="subst"/>
+   <elementRef key="supplied"/>
+   <elementRef key="table"/>
+   <elementRef key="TEI"/>
+   <elementRef key="teiCorpus"/>
+   <elementRef key="text"/>
+   <elementRef key="time"/>
+   <elementRef key="title"/>
+   <elementRef key="titlePage"/>
+   <elementRef key="titlePart"/>
+   <elementRef key="trailer"/>
+   <elementRef key="unclear"/>
+   <elementRef key="w"/>
+</specGrp>
+          <specGrp xmlns="http://www.tei-c.org/ns/1.0" xmlns:XSL="http://www.w3.org/1999/XSL/Transform" xml:id="simpleelementspm">
+            <elementSpec ident="ab" mode="change">
               <model behaviour="paragraph"/>
             </elementSpec>
-            <elementSpec ident="abbr" mode="change" >
+            <elementSpec ident="abbr" mode="change">
               <model behaviour="inline"/>
             </elementSpec>
-            <elementSpec ident="actor" mode="change" >
+            <elementSpec ident="actor" mode="change">
               <model behaviour="inline"/>
             </elementSpec>
-            <elementSpec ident="add" mode="change" >
+            <elementSpec ident="add" mode="change">
               <model behaviour="inline">
                 <outputRendition>color: green; text-decoration: underline;</outputRendition>
               </model>
             </elementSpec>
-            <elementSpec ident="address" mode="change" >
+            <elementSpec ident="address" mode="change">
               <model behaviour="block">
                 <outputRendition>margin-top: 2em; margin-left: 2em; margin-right: 2em; margin-bottom:
                   2em;</outputRendition>
               </model>
             </elementSpec>
-            <elementSpec ident="addrLine" mode="change" >
+            <elementSpec ident="addrLine" mode="change">
               <model behaviour="block">
                 <outputRendition>white-space: nowrap;</outputRendition>
               </model>
             </elementSpec>
-            <elementSpec ident="addSpan" mode="change" >
+            <elementSpec ident="addSpan" mode="change">
               <model behaviour="anchor">
                 <param name="id">@xml:id</param>
               </model>
             </elementSpec>
-            <elementSpec  ident="am" mode="change" >
+            <elementSpec ident="am" mode="change">
               <model behaviour="inline"/>
             </elementSpec>
-            <elementSpec ident="anchor" mode="change" >
+            <elementSpec ident="anchor" mode="change">
               <model behaviour="anchor">
                 <param name="id">@xml:id</param>
               </model>
             </elementSpec>
-            <elementSpec ident="argument" mode="change" >
+            <elementSpec ident="argument" mode="change">
               <model behaviour="block">
                 <outputRendition>margin-bottom: 0.5em;</outputRendition>
               </model>
             </elementSpec>
-            <elementSpec  ident="author" mode="change"   >
+            <elementSpec ident="author" mode="change">
               <model predicate="ancestor::teiHeader" behaviour="omit"/>
               <model behaviour="inline"/>
             </elementSpec>
-            <elementSpec ident="back" mode="change" >
+            <elementSpec ident="back" mode="change">
               <model behaviour="block"/>
             </elementSpec>
-            <elementSpec ident="bibl" mode="change" >
+            <elementSpec ident="bibl" mode="change">
               <constraintSpec mode="add" ident="noEmptyBibl" scheme="isoschematron">
                 <constraint>
-                  <assert xmlns="http://purl.oclc.org/dsdl/schematron"
-                    test="child::* or child::text()[normalize-space()]" role="ERROR"> Element "<name/>" may not be
+                  <assert xmlns="http://purl.oclc.org/dsdl/schematron" test="child::* or child::text()[normalize-space()]" role="ERROR"> Element "<name/>" may not be
                     empty. </assert>
                 </constraint>
               </constraintSpec>
               <model predicate="parent::listBibl" behaviour="listItem"/>
               <model behaviour="inline"/>
             </elementSpec>
-            <elementSpec ident="body" mode="change" >
+            <elementSpec ident="body" mode="change">
               <modelSequence>
                 <model behaviour="index">
                   <param name="type">'toc'</param>
@@ -3472,41 +5653,41 @@ live without God in the world, and only mind earthly things.
                 <model behaviour="block"/>
               </modelSequence>
             </elementSpec>
-            <elementSpec ident="byline" mode="change" >
+            <elementSpec ident="byline" mode="change">
               <model behaviour="block"/>
             </elementSpec>
-            <elementSpec  ident="c" mode="change" >
+            <elementSpec ident="c" mode="change">
               <model behaviour="inline"/>
             </elementSpec>
-            <elementSpec ident="castGroup" mode="change" >
+            <elementSpec ident="castGroup" mode="change">
               <model predicate="child::*" behaviour="list">
                 <desc>Insert list. </desc>
                 <param name="content">castItem|castGroup</param>
               </model>
             </elementSpec>
-            <elementSpec ident="castItem" mode="change" >
+            <elementSpec ident="castItem" mode="change">
               <model behaviour="listItem">
                 <desc>Insert item, rendered as described in parent list rendition. </desc>
               </model>
             </elementSpec>
-            <elementSpec ident="castList" mode="change" >
+            <elementSpec ident="castList" mode="change">
               <model predicate="child::*" behaviour="list" useSourceRendition="true">
                 <param name="content">castItem</param>
                 <outputRendition>list-style: ordered;</outputRendition>
               </model>
             </elementSpec>
-            <elementSpec ident="cb" mode="change" >
+            <elementSpec ident="cb" mode="change">
               <model behaviour="break">
                 <param name="type">'column'</param>
                 <param name="label">@n</param>
               </model>
             </elementSpec>
-            <elementSpec ident="cell" mode="change" >
+            <elementSpec ident="cell" mode="change">
               <model behaviour="cell">
                 <desc>Insert table cell. </desc>
               </model>
             </elementSpec>
-            <elementSpec ident="choice" mode="change" >
+            <elementSpec ident="choice" mode="change">
               <constraintSpec ident="choiceSize" scheme="isoschematron" mode="add">
                 <constraint>
                   <assert xmlns="http://purl.oclc.org/dsdl/schematron" test="count(*) &gt; 1" role="ERROR"> Element
@@ -3515,9 +5696,7 @@ live without God in the world, and only mind earthly things.
               </constraintSpec>
               <constraintSpec ident="choiceContent" scheme="isoschematron" mode="add">
                 <constraint>
-                  <assert xmlns="http://purl.oclc.org/dsdl/schematron"
-                    test="(tei:corr or tei:sic or tei:expan or     tei:abbr or tei:reg or tei:orig) and ((tei:corr and tei:sic) or (tei:expan     and tei:abbr) or (tei:reg and tei:orig))"
-                    role="ERROR"> Element "<name/>" must have corresponding corr/sic, expand/abbr, reg/orig </assert>
+                  <assert xmlns="http://purl.oclc.org/dsdl/schematron" test="(tei:corr or tei:sic or tei:expan or     tei:abbr or tei:reg or tei:orig) and ((tei:corr and tei:sic) or (tei:expan     and tei:abbr) or (tei:reg and tei:orig))" role="ERROR"> Element "<name/>" must have corresponding corr/sic, expand/abbr, reg/orig </assert>
                 </constraint>
               </constraintSpec>
               <model output="plain" predicate="sic and corr" behaviour="inline">
@@ -3542,17 +5721,17 @@ live without God in the world, and only mind earthly things.
                 <param name="alternate">orig[1]</param>
               </model>
             </elementSpec>
-            <elementSpec ident="cit" mode="change" >
+            <elementSpec ident="cit" mode="change">
               <model predicate="child::quote and child::bibl" behaviour="cit">
                 <desc>Insert citation </desc>
               </model>
             </elementSpec>
-            <elementSpec ident="closer" mode="change" >
+            <elementSpec ident="closer" mode="change">
               <model behaviour="block">
                 <outputRendition>margin-top: 1em; margin-left: 1em; margin-left: 1em;</outputRendition>
               </model>
             </elementSpec>
-            <elementSpec ident="corr" mode="change" >
+            <elementSpec ident="corr" mode="change">
               <model predicate="parent::choice and count(parent::*/*) gt 1" behaviour="inline">
                 <desc>simple inline, if in parent choice. </desc>
               </model>
@@ -3561,7 +5740,7 @@ live without God in the world, and only mind earthly things.
                 <outputRendition scope="after">content: ']';</outputRendition>
               </model>
             </elementSpec>
-            <elementSpec ident="date" mode="change" >
+            <elementSpec ident="date" mode="change">
               <model output="print" predicate="text()" behaviour="inline"/>
               <model output="print" predicate="@when and not(text())" behaviour="inline">
                 <param name="content">@when</param>
@@ -3572,49 +5751,49 @@ live without God in the world, and only mind earthly things.
               </model>
               <model predicate="text()" behaviour="inline"/>
             </elementSpec>
-            <elementSpec ident="dateline" mode="change" >
+            <elementSpec ident="dateline" mode="change">
               <model behaviour="block"/>
             </elementSpec>
-            <elementSpec ident="del" mode="change" >
+            <elementSpec ident="del" mode="change">
               <model behaviour="inline">
                 <outputRendition> text-decoration: line-through;</outputRendition>
               </model>
             </elementSpec>
-            <elementSpec ident="desc" mode="change" >
+            <elementSpec ident="desc" mode="change">
               <model behaviour="inline"/>
             </elementSpec>
-            <elementSpec ident="div" mode="change" >
+            <elementSpec ident="div" mode="change">
               <model predicate="@type='title_page'" behaviour="block">
                 <outputRendition>border: 1px solid black; padding: 5px;</outputRendition>
               </model>
               <model behaviour="section" predicate="parent::body or parent::front or parent::back"/>
               <model behaviour="block"/>
             </elementSpec>
-            <elementSpec ident="docAuthor" mode="change" >
+            <elementSpec ident="docAuthor" mode="change">
               <model predicate="ancestor::teiHeader" behaviour="omit">
                 <desc>Omit if located in teiHeader. </desc>
               </model>
               <model behaviour="inline"/>
             </elementSpec>
-            <elementSpec ident="docDate" mode="change" >
+            <elementSpec ident="docDate" mode="change">
               <model predicate="ancestor::teiHeader" behaviour="omit">
                 <desc>Omit if located in teiHeader. </desc>
               </model>
               <model behaviour="inline"/>
             </elementSpec>
-            <elementSpec ident="docEdition" mode="change" >
+            <elementSpec ident="docEdition" mode="change">
               <model predicate="ancestor::teiHeader" behaviour="omit">
                 <desc>Omit if located in teiHeader. </desc>
               </model>
               <model behaviour="inline"/>
             </elementSpec>
-            <elementSpec ident="docImprint" mode="change" >
+            <elementSpec ident="docImprint" mode="change">
               <model predicate="ancestor::teiHeader" behaviour="omit">
                 <desc>Omit if located in teiHeader. </desc>
               </model>
               <model behaviour="inline"/>
             </elementSpec>
-            <elementSpec ident="docTitle" mode="change" >
+            <elementSpec ident="docTitle" mode="change">
               <model predicate="ancestor::teiHeader" behaviour="omit">
                 <desc>Omit if located in teiHeader. </desc>
               </model>
@@ -3622,16 +5801,16 @@ live without God in the world, and only mind earthly things.
                 <outputRendition>font-size: larger;</outputRendition>
               </model>
             </elementSpec>
-            <elementSpec ident="epigraph" mode="change" >
+            <elementSpec ident="epigraph" mode="change">
               <model behaviour="block"/>
             </elementSpec>
-            <elementSpec ident="ex" mode="change" >
+            <elementSpec ident="ex" mode="change">
               <model behaviour="inline"/>
             </elementSpec>
-            <elementSpec ident="expan" mode="change" >
+            <elementSpec ident="expan" mode="change">
               <model behaviour="inline"/>
             </elementSpec>
-            <elementSpec ident="figDesc" mode="change" >
+            <elementSpec ident="figDesc" mode="change">
               <model behaviour="inline">
                 <outputRendition scope="before">content: '[..';</outputRendition>
                 <outputRendition scope="after">content: '..]';</outputRendition>
@@ -3645,34 +5824,34 @@ live without God in the world, and only mind earthly things.
                 </outputRendition>
               </model>
             </elementSpec>
-            <elementSpec ident="floatingText" mode="change" >
+            <elementSpec ident="floatingText" mode="change">
               <model behaviour="block">
                 <outputRendition> margin: 6pt; border: solid black 1pt; </outputRendition>
               </model>
             </elementSpec>
-            <elementSpec ident="foreign" mode="change" >
+            <elementSpec ident="foreign" mode="change">
               <model behaviour="inline">
                 <outputRendition>font-style:italic;</outputRendition>
               </model>
             </elementSpec>
-            <elementSpec ident="formula" mode="change" >
+            <elementSpec ident="formula" mode="change">
               <model predicate="@rendition='simple:display'" behaviour="block"/>
               <model behaviour="inline"/>
             </elementSpec>
-            <elementSpec ident="front" mode="change" >
+            <elementSpec ident="front" mode="change">
               <model behaviour="block"/>
             </elementSpec>
-            <elementSpec ident="fw" mode="change" >
+            <elementSpec ident="fw" mode="change">
               <model predicate="ancestor::p or ancestor::ab" behaviour="inline"/>
               <model behaviour="block"/>
             </elementSpec>
-            <elementSpec ident="g" mode="change" >
+            <elementSpec ident="g" mode="change">
               <model predicate="not(text())" behaviour="glyph">
                 <param name="uri">@ref</param>
               </model>
               <model behaviour="inline"/>
             </elementSpec>
-            <elementSpec ident="gap" mode="change" >
+            <elementSpec ident="gap" mode="change">
               <model predicate="desc" behaviour="inline">
                 <outputRendition>color: grey;</outputRendition>
               </model>
@@ -3686,7 +5865,7 @@ live without God in the world, and only mind earthly things.
                 <outputRendition scope="before">content: '[...]';</outputRendition>
               </model>
             </elementSpec>
-            <elementSpec ident="graphic" mode="change" >
+            <elementSpec ident="graphic" mode="change">
               <model behaviour="graphic">
                 <param name="url">@url</param>
                 <param name="width">@width</param>
@@ -3695,13 +5874,13 @@ live without God in the world, and only mind earthly things.
                 <param name="title">desc</param>
               </model>
             </elementSpec>
-            <elementSpec ident="group" mode="change" >
+            <elementSpec ident="group" mode="change">
               <model behaviour="block"/>
             </elementSpec>
-            <elementSpec ident="handShift" mode="change" >
+            <elementSpec ident="handShift" mode="change">
               <model behaviour="inline"/>
             </elementSpec>
-            <elementSpec ident="head" mode="change" >
+            <elementSpec ident="head" mode="change">
               <model predicate="parent::figure" behaviour="block">
                 <outputRendition>font-style: italic;</outputRendition>
               </model>
@@ -3719,7 +5898,7 @@ live without God in the world, and only mind earthly things.
               </model>
               <model behaviour="block"/>
             </elementSpec>
-            <elementSpec ident="hi" mode="change" >
+            <elementSpec ident="hi" mode="change">
               <model predicate="@rendition" behaviour="inline" useSourceRendition="true">
                 <outputRendition>font-style: italic;</outputRendition>
               </model>
@@ -3727,21 +5906,21 @@ live without God in the world, and only mind earthly things.
                 <outputRendition>font-style: italic;</outputRendition>
               </model>
             </elementSpec>
-            <elementSpec ident="imprimatur" mode="change" >
+            <elementSpec ident="imprimatur" mode="change">
               <model behaviour="block"/>
             </elementSpec>
-            <elementSpec ident="item" mode="change" >
+            <elementSpec ident="item" mode="change">
               <model behaviour="listItem"/>
             </elementSpec>
-            <elementSpec ident="l" mode="change" >
+            <elementSpec ident="l" mode="change">
               <model behaviour="block" useSourceRendition="true">
                 <outputRendition> margin-left: 1em; </outputRendition>
               </model>
             </elementSpec>
-            <elementSpec ident="label" mode="change" >
+            <elementSpec ident="label" mode="change">
               <model behaviour="inline"/>
             </elementSpec>
-            <elementSpec ident="lb"  mode="change" >
+            <elementSpec ident="lb" mode="change">
               <model behaviour="break" useSourceRendition="true">
                 <param name="type">'line'</param>
                 <param name="label">@n</param>
@@ -3750,7 +5929,7 @@ live without God in the world, and only mind earthly things.
             <elementSpec ident="lg" mode="change">
               <model behaviour="block"/>
             </elementSpec>
-            <elementSpec ident="list" mode="change" >
+            <elementSpec ident="list" mode="change">
               <model predicate="@rendition" behaviour="list" useSourceRendition="true">
                 <param name="content">item</param>
               </model>
@@ -3758,22 +5937,22 @@ live without God in the world, and only mind earthly things.
                 <param name="content">item</param>
               </model>
             </elementSpec>
-            <elementSpec ident="listBibl" mode="change" >
+            <elementSpec ident="listBibl" mode="change">
               <model predicate="bibl" behaviour="list">
                 <param name="content">bibl</param>
               </model>
               <model behaviour="block"/>
             </elementSpec>
-            <elementSpec ident="measure" mode="change" >
+            <elementSpec ident="measure" mode="change">
               <model behaviour="inline"/>
             </elementSpec>
-            <elementSpec ident="milestone" mode="change" >
+            <elementSpec ident="milestone" mode="change">
               <model behaviour="inline"/>
             </elementSpec>
-            <elementSpec ident="name" mode="change" >
+            <elementSpec ident="name" mode="change">
               <model behaviour="inline"/>
             </elementSpec>
-            <elementSpec ident="note" mode="change" >
+            <elementSpec ident="note" mode="change">
               <model predicate="@place" behaviour="note">
                 <param name="place">@place</param>
                 <param name="label">@n</param>
@@ -3787,26 +5966,24 @@ live without God in the world, and only mind earthly things.
                 <outputRendition>font-size:small;</outputRendition>
               </model>
             </elementSpec>
-            <elementSpec ident="num" mode="change" >
+            <elementSpec ident="num" mode="change">
               <model behaviour="inline"/>
             </elementSpec>
-            <elementSpec ident="opener" mode="change" >
+            <elementSpec ident="opener" mode="change">
               <model behaviour="block"/>
             </elementSpec>
-            <elementSpec ident="orig" mode="change" >
+            <elementSpec ident="orig" mode="change">
               <model behaviour="inline"/>
             </elementSpec>
-            <elementSpec ident="p" mode="change" >
+            <elementSpec ident="p" mode="change">
               <model behaviour="paragraph" useSourceRendition="true">
                 <outputRendition>text-align: justify;</outputRendition>
               </model>
             </elementSpec>
-            <elementSpec ident="pb" mode="change" >
+            <elementSpec ident="pb" mode="change">
               <constraintSpec ident="pbposition" scheme="isoschematron">
                 <constraint>
-                  <report xmlns="http://purl.oclc.org/dsdl/schematron"
-                    test="parent::*/text() and not           (preceding-sibling::text() and           following-sibling::text())"
-                    >please make sure pb elements are not at the start or end of mixed content </report>
+                  <report xmlns="http://purl.oclc.org/dsdl/schematron" test="parent::*/text() and not           (preceding-sibling::text() and           following-sibling::text())">please make sure pb elements are not at the start or end of mixed content </report>
                 </constraint>
               </constraintSpec>
               <model behaviour="break" useSourceRendition="true">
@@ -3818,23 +5995,23 @@ live without God in the world, and only mind earthly things.
                 <outputRendition scope="after">content: ']';</outputRendition>
               </model>
             </elementSpec>
-            <elementSpec ident="pc" mode="change" >
+            <elementSpec ident="pc" mode="change">
               <model behaviour="inline"/>
             </elementSpec>
-            <elementSpec ident="postscript" mode="change" >
+            <elementSpec ident="postscript" mode="change">
               <model behaviour="block"/>
             </elementSpec>
-            <elementSpec ident="publisher" mode="change" >
+            <elementSpec ident="publisher" mode="change">
               <model predicate="ancestor::teiHeader" behaviour="omit">
                 <desc>Omit if located in teiHeader. </desc>
               </model>
             </elementSpec>
-            <elementSpec  ident="pubPlace" mode="change" >
+            <elementSpec ident="pubPlace" mode="change">
               <model predicate="ancestor::teiHeader" behaviour="omit">
                 <desc>Omit if located in teiHeader. </desc>
               </model>
             </elementSpec>
-            <elementSpec ident="q" mode="change" >
+            <elementSpec ident="q" mode="change">
               <model predicate="l" behaviour="block" useSourceRendition="true">
                 <outputRendition>margin-left: 10px; margin-right: 10px; </outputRendition>
               </model>
@@ -3846,7 +6023,7 @@ live without God in the world, and only mind earthly things.
                 <outputRendition>margin-left: 10px; margin-right: 10px; </outputRendition>
               </model>
             </elementSpec>
-            <elementSpec ident="quote" mode="change" >
+            <elementSpec ident="quote" mode="change">
               <model predicate="ancestor::p" behaviour="inline" useSourceRendition="true">
                 <desc>If it is inside a paragraph then it is inline, otherwise it is block level</desc>
                 <outputRendition scope="before">content: '‘';</outputRendition>
@@ -3857,7 +6034,7 @@ live without God in the world, and only mind earthly things.
                 <outputRendition>margin-left: 10px; margin-right: 10px; </outputRendition>
               </model>
             </elementSpec>
-            <elementSpec ident="ref" mode="change" >
+            <elementSpec ident="ref" mode="change">
               <model behaviour="inline" predicate="not(@target)"/>
               <model predicate="not(text())" behaviour="link">
                 <param name="content">@target</param>
@@ -3867,19 +6044,19 @@ live without God in the world, and only mind earthly things.
                 <param name="link">@target</param>
               </model>
             </elementSpec>
-            <elementSpec ident="reg" mode="change" >
+            <elementSpec ident="reg" mode="change">
               <model behaviour="inline"/>
             </elementSpec>
-            <elementSpec ident="rhyme" mode="change" >
+            <elementSpec ident="rhyme" mode="change">
               <model behaviour="inline"/>
             </elementSpec>
-            <elementSpec ident="role" mode="change" >
+            <elementSpec ident="role" mode="change">
               <model behaviour="block"/>
             </elementSpec>
-            <elementSpec ident="roleDesc" mode="change" >
+            <elementSpec ident="roleDesc" mode="change">
               <model behaviour="block"/>
             </elementSpec>
-            <elementSpec ident="row" mode="change" >
+            <elementSpec ident="row" mode="change">
               <model predicate="@role='label'" behaviour="row">
                 <outputRendition>font-weight: bold;</outputRendition>
               </model>
@@ -3887,17 +6064,17 @@ live without God in the world, and only mind earthly things.
                 <desc>Insert table row. </desc>
               </model>
             </elementSpec>
-            <elementSpec ident="rs" mode="change" >
+            <elementSpec ident="rs" mode="change">
               <model behaviour="inline"/>
             </elementSpec>
-            <elementSpec ident="s" mode="change" >
+            <elementSpec ident="s" mode="change">
               <model behaviour="inline"/>
             </elementSpec>
-            <elementSpec ident="salute" mode="change" >
+            <elementSpec ident="salute" mode="change">
               <model predicate="parent::closer" behaviour="inline"/>
               <model behaviour="block"/>
             </elementSpec>
-            <elementSpec ident="seg" mode="change" >
+            <elementSpec ident="seg" mode="change">
               <model behaviour="inline" useSourceRendition="true"/>
             </elementSpec>
             <elementSpec ident="sic" mode="change">
@@ -3907,7 +6084,7 @@ live without God in the world, and only mind earthly things.
                 <outputRendition scope="after">content: '}';</outputRendition>
               </model>
             </elementSpec>
-            <elementSpec ident="signed" mode="change" >
+            <elementSpec ident="signed" mode="change">
               <model behaviour="block" predicate="parent::closer">
                 <outputRendition> text-align: right; </outputRendition>
               </model>
@@ -3915,29 +6092,29 @@ live without God in the world, and only mind earthly things.
                 <outputRendition> font-style: italic; </outputRendition>
               </model>
             </elementSpec>
-            <elementSpec ident="sp" mode="change" >
+            <elementSpec ident="sp" mode="change">
               <model behaviour="block"/>
             </elementSpec>
-            <elementSpec ident="space" mode="change" >
+            <elementSpec ident="space" mode="change">
               <model behaviour="inline"/>
             </elementSpec>
-            <elementSpec ident="speaker" mode="change" >
+            <elementSpec ident="speaker" mode="change">
               <model behaviour="block">
                 <outputRendition> font-style:italic; </outputRendition>
               </model>
             </elementSpec>
-            <elementSpec ident="spGrp" mode="change" >
+            <elementSpec ident="spGrp" mode="change">
               <model behaviour="block"/>
             </elementSpec>
-            <elementSpec ident="stage" mode="change" >
+            <elementSpec ident="stage" mode="change">
               <model behaviour="block">
                 <outputRendition>font-style: italic;</outputRendition>
               </model>
             </elementSpec>
-            <elementSpec ident="subst" mode="change" >
+            <elementSpec ident="subst" mode="change">
               <model behaviour="inline"/>
             </elementSpec>
-            <elementSpec ident="supplied" mode="change" >
+            <elementSpec ident="supplied" mode="change">
               <model predicate="parent::choice" behaviour="inline"/>
               <model predicate="@reason='damage'" behaviour="inline">
                 <outputRendition scope="before">content:"&lt;";</outputRendition>
@@ -3956,41 +6133,41 @@ live without God in the world, and only mind earthly things.
                 <outputRendition scope="after">content:"}";</outputRendition>
               </model>
             </elementSpec>
-            <elementSpec ident="table" mode="change" >
+            <elementSpec ident="table" mode="change">
               <model behaviour="table">
                 <outputRendition> font-size: smaller; background-color: #F0F0F0; </outputRendition>
               </model>
             </elementSpec>
-            <elementSpec ident="fileDesc" mode="change" >
+            <elementSpec ident="fileDesc" mode="change">
               <model behaviour="title">
                 <param name="content">titleStmt</param>
               </model>
             </elementSpec>
-            <elementSpec ident="profileDesc" mode="change" >
+            <elementSpec ident="profileDesc" mode="change">
               <model behaviour="omit"/>
             </elementSpec>
-            <elementSpec ident="revisionDesc" mode="change" >
+            <elementSpec ident="revisionDesc" mode="change">
               <model behaviour="omit"/>
             </elementSpec>
-            <elementSpec ident="encodingDesc" mode="change" >
+            <elementSpec ident="encodingDesc" mode="change">
               <model behaviour="omit"/>
             </elementSpec>
-            <elementSpec ident="teiHeader" mode="change" >
+            <elementSpec ident="teiHeader" mode="change">
               <model behaviour="metadata"/>
             </elementSpec>
-            <elementSpec ident="TEI" mode="change" >
+            <elementSpec ident="TEI" mode="change">
               <model behaviour="document"/>
             </elementSpec>
-            <elementSpec  ident="text" mode="change" >
+            <elementSpec ident="text" mode="change">
               <model behaviour="body">
                 <outputRendition> max-width: 80%; margin: auto; font-family: Verdana, Tahoma, Geneva, Arial, Helvetica,
                   sans-serif; </outputRendition>
               </model>
             </elementSpec>
-            <elementSpec ident="time" mode="change" >
+            <elementSpec ident="time" mode="change">
               <model behaviour="inline"/>
             </elementSpec>
-            <elementSpec ident="title" mode="change" >
+            <elementSpec ident="title" mode="change">
               <modelSequence predicate="parent::titleStmt/parent::fileDesc">
                 <model predicate="preceding-sibling::title" behaviour="text">
                   <param name="content">' — '</param>
@@ -4012,8 +6189,7 @@ live without God in the world, and only mind earthly things.
                 <model behaviour="inline">
                   <outputRendition>font-style: italic;</outputRendition>
                 </model>
-                <model predicate="following-sibling::* and     (ancestor::biblStruct  or     ancestor::biblFull)"
-                  behaviour="text">
+                <model predicate="following-sibling::* and     (ancestor::biblStruct  or     ancestor::biblFull)" behaviour="text">
                   <param name="content">', '</param>
                 </model>
               </modelSequence>
@@ -4021,8 +6197,7 @@ live without God in the world, and only mind earthly things.
                 <model behaviour="inline">
                   <outputRendition>font-style: italic;</outputRendition>
                 </model>
-                <model predicate="following-sibling::* and     (ancestor::biblStruct  or     ancestor::biblFull)"
-                  behaviour="text">
+                <model predicate="following-sibling::* and     (ancestor::biblStruct  or     ancestor::biblFull)" behaviour="text">
                   <param name="content">'. '</param>
                 </model>
               </modelSequence>
@@ -4030,25 +6205,25 @@ live without God in the world, and only mind earthly things.
                 <outputRendition>font-style: italic;</outputRendition>
               </model>
             </elementSpec>
-            <elementSpec ident="titlePage" mode="change" >
+            <elementSpec ident="titlePage" mode="change">
               <model behaviour="block" useSourceRendition="true">
                 <outputRendition> text-align: center;</outputRendition>
               </model>
             </elementSpec>
-            <elementSpec ident="titlePart" mode="change" >
+            <elementSpec ident="titlePart" mode="change">
               <model behaviour="block" useSourceRendition="true"/>
             </elementSpec>
-            <elementSpec ident="trailer" mode="change" >
+            <elementSpec ident="trailer" mode="change">
               <model behaviour="block">
                 <outputRendition>color: green;</outputRendition>
               </model>
             </elementSpec>
-            <elementSpec ident="unclear" mode="change" >
+            <elementSpec ident="unclear" mode="change">
               <model behaviour="inline">
                 <outputRendition scope="after">content: ' [?] ';</outputRendition>
               </model>
             </elementSpec>
-            <elementSpec ident="w" mode="change" >
+            <elementSpec ident="w" mode="change">
               <model behaviour="inline"/>
             </elementSpec>
           </specGrp>
